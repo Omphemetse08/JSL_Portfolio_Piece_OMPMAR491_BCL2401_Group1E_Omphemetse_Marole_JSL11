@@ -112,3 +112,13 @@ function addTaskToUI(task) {
     console.error(`Column not found for status: ${task.status}`);
     return;
   }
+
+  function addTaskToUI(task) {
+    const column = document.querySelector('.column-div[data-status="${task.status}');
+    if (!column) {
+      console.error(`column not found for status: ${task.status}`);
+      return;
+    }
+  }
+
+  let tasksContainer = column.querySelector()
