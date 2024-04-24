@@ -159,4 +159,50 @@ function addTaskToUI(task) {
 
   const taskElement = document.createElement("div");
   taskElement.className = "task-div"; // change class name or task-div
+  taskElement.textContent = task.title; // Modify as needed
+  taskElement.setAttribute("data-task-id", task.id);
+
+  tasksContainer.appendChild(taskElement);
+}
+
+function setupEventListeners() {
+  // Cancel editing task event listener
+  const cancelEditBtn = document.getElementById("cancel-edit-btn");
+  cancelEditBtn.addEventListener("click", () => {
+    toggleModal(false, elements.editTaskModal);
+  });
+
+  // Cancel adding new task event listener
+  const cancelAddTaskBtn = document.getElementById("cancel-add-task-btn");
+  cancelAddTaskBtn.addEventListener("click", () => {
+    toggleModal(false);
+    elements.filterDiv.style.display = "none"; // Also hide the filter overlay
+  });
+
+  // Clicking outside the modal to close it
+  elements.filterDiv.addEventListener("click", () => {
+    toggleModal(false);
+    elements.filterDiv.style.display = "none"; // Also hide the filter overlay
+  });
+  // Show sidebar event listener
+  elements.hideSideBarBtn.addEventListener("click", () => {
+    toggleSidebar(false);
+  });
+  elements.showSideBarBtn.addEventListener("click", () => {
+    toggleSidebar(true);
+  });
+
+  // Theme switch event listener
+  elements.themeSwitch.addEventListener("change", toggleTheme);
+
+  // Show Add New Task Modal event listener
+  elements.createNewTaskBtn.addEventListener("click", () => {
+    toggleModal(true);
+    elements.filterDiv.style.display = "block"; // Also show the filter overlay
+  });
+
+  // Add new task form submission event listener
+  elements.modalWindow.addEventListener("submit", (event) => {
+    addTask(event);
+  });
 }
