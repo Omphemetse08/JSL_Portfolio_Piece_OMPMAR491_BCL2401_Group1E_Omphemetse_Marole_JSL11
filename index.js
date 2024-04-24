@@ -120,3 +120,43 @@ function filterAndDisplayTasksByBoard(boardName) {
       });
   });
 }
+
+function refreshTasksUI() {
+  filterAndDisplayTasksByBoard(activeBoard);
+}
+
+// Style the active board by adding an active class
+// TASK: Fix Bugs
+function styleActiveBoard(boardName) {
+  document.querySelectorAll(".board-btn").forEach((btn) => {
+    if (btn.textContent === boardName) {
+      btn.classList.add("active");
+    } else {
+      // use classList
+      btn.classList.remove("active");
+    }
+  });
+}
+
+function addTaskToUI(task) {
+  const column = document.querySelector(
+    '.column-div[data-status="${task.status}"]'
+  );
+  if (!column) {
+    console.error(`Column not found for status: ${task.status}`);
+    return;
+  }
+
+  let tasksContainer = column.querySelector(".tasks-container");
+  if (!tasksContainer) {
+    console.warn(
+      `tasks container not found for status: ${task.status}, creating one.`
+    );
+    tasksContainer = document.createElement("div");
+    tasksContainer.className = "tasks-container";
+    column.appendChild(tasksContainer);
+  }
+
+  const taskElement = document.createElement("div");
+  taskElement.className = "task-div"; // change class name or task-div
+}
