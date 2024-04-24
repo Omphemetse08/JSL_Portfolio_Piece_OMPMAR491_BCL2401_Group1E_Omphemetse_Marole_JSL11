@@ -72,8 +72,8 @@ function displayBoards(boards) {
       activeBoard = board; // assigns active board
       localStorage.setItem("activeBoard", JSON.stringify(activeBoard));
       styleActiveBoard(activeBoard);
-      boardsContainer.appendChild(boardElement);
     });
+    boardsContainer.appendChild(boardElement);
   });
 }
 const colTitles = {
@@ -206,3 +206,75 @@ function setupEventListeners() {
     addTask(event);
   });
 }
+
+//Toggles tasks modal
+// TASK: Fix bugs
+function toggleModal(show, modal = elements.modalWindow) {
+  modal.style.display = show ? "block" : "none";
+}
+
+/***************************************************************************************************************************************
+ * COMPLETE FUNCTION CODE
+ **************************************************************************************************************************************/
+
+function addTask(event) {
+  event.preventDefault();
+
+  // Assign user input to the task object
+  // const task = {
+  //   taskTitle: even.target.tasktitle.value,
+  //   description: event.target.description.value,
+  //   currStatus: event.target.status.value
+
+  //};
+
+  const newTask = createNewTask(task);
+  if (newTask) {
+    addTaskToUI(newTask);
+    toggleModal(false);
+    elements.filterDiv.style.display = "none"; // Also hide the filter overlay
+    event.target.reset();
+    refreshTasksUI();
+  }
+}
+
+function toggleTheme() {
+  const isLightTheme = elements.themeSwitch.checked;
+  if (isLightTheme) {
+    localStorage.setItem("light-theme", "enable"); // set to light mode
+  } else {
+    localStorage.setItem("light-theme", "disable"); // set back to default
+  }
+
+  document.body.classList.toggle("light-theme", isLightTheme);
+}
+
+function openEditTaskModal(task) {
+  // set task details in modal inputs
+
+  // get button elements from the task modal
+
+  // Call saveTaskChanges upon click of save changes button
+
+  // Delete task using a helper function a help function and close the task modal
+
+  toggleModal(true, elements.editTaskModal); //show the edit task modal
+}
+
+function saveTaskChanges(taskId) {
+  // Get new user inputs
+
+  // Create an object with the updated task details
+
+  //update task using a helper function
+
+  // Close the modal and refresh the UI to reflect changes
+
+  refreshTasksUI();
+}
+
+/*************************************************************************************************************************************************/
+
+document.addEventListener("DOMContentLoaded", function () {
+  init(); // init is called after the DOM is fully loaded
+});
