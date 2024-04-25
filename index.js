@@ -335,7 +335,7 @@ function saveTaskChanges(taskId) {
     board: activeBoard,
   };
 
-  // Update task using a hlper functoin
+  // Update task using a helper function
   putTask(taskId, updatedTaskDetails);
   // Close the modal and refresh the UI to reflect the changes
   toggleModal(false, elements.editTaskModal);
