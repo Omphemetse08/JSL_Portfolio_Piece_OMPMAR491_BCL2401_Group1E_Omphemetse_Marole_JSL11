@@ -247,7 +247,7 @@ function addTask(event) {
   const task = {
     title: document.getElementById("title-input").value,
     description: document.getElementById("desc-input").value,
-    status: document.getElementById("curr-status").value,
+    status: document.getElementById("select-status").value,
     board: activeBoard,
   };
   if (
@@ -276,7 +276,8 @@ function toggleSidebar(show) {
     elements.showSideBarBtn.style.display = "none"; //hide the sidebar button
   } else {
     sidebar.style.display = "none"; // hide the sidebar
-    elements.showSideBarBtn.style.display = "block"; //show the sidebar button
+    elements.showSideBarBtn.style.display = "block";
+    //show the sidebar button
   }
 }
 

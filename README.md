@@ -36,3 +36,7 @@ The code is divided into several sections:
 6. Toggle the sidebar using the sidebar button.
 
 # Challenges
+
+1. When changing the theme to light the logo doesn't disapear.
+2. Am struggling to move the toggle theme sidebar to the bottom.
+3. I was struggling with Add New Task and the Create Task but managed to fix.
