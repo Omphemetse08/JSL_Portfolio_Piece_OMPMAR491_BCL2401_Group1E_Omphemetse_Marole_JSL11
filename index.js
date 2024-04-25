@@ -165,10 +165,10 @@ function addTaskToUI(task) {
   const column = document.querySelector(
     '.column-div[data-status="${task.status}"]'
   );
-  /*if (!column) {
+  if (!column) {
     console.error(`Column not found for status: ${task.status}`);
     return;
-  }*/
+  }
 
   let tasksContainer = column.querySelector(".tasks-container");
   if (!tasksContainer) {
@@ -251,14 +251,14 @@ function addTask(event) {
     status: document.getElementById("select-status").value,
     board: activeBoard,
   };
-  if (
+  /*if (
     task.title.trim() === "" ||
     task.description.trim() === "" ||
     task.status.trim() === ""
   ) {
     alert("Fill in the missing fields");
     return;
-  }
+  }*/
 
   const newTask = createNewTask(task);
   if (newTask) {
