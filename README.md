@@ -38,5 +38,5 @@ The code is divided into several sections:
 # Challenges
 
 1. When changing the theme to light the logo doesn't disapear.
-2. Am struggling to move the toggle theme sidebar to the bottom.
+2. Was struggling to move the toggle theme side-bar-bottom but i managed to fix it.
 3. I was struggling with Add New Task and the Create Task but managed to fix.

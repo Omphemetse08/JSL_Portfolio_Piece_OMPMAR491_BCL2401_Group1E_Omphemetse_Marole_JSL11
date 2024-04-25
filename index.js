@@ -165,10 +165,10 @@ function addTaskToUI(task) {
   const column = document.querySelector(
     '.column-div[data-status="${task.status}"]'
   );
-  if (!column) {
+  /*if (!column) {
     console.error(`Column not found for status: ${task.status}`);
     return;
-  }
+  }*/
 
   let tasksContainer = column.querySelector(".tasks-container");
   if (!tasksContainer) {
