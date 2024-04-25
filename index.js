@@ -31,6 +31,7 @@ const elements = {
   hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
   sideBar: document.querySelector(".side-bar"),
+  sideBarBottom: document.querySelector(".side-bar-bottom"),
   // editTaskModal: document.getElementById("edit-task-modal-window"),
   // Main Layout: Header with board title, add task button, and main content area for task columns.
   headerBoardName: document.getElementById("header-board-name"),
@@ -280,6 +281,8 @@ function toggleSidebar(show) {
     //show the sidebar button
   }
 }
+
+elements.sideBarBottom.style.paddingTop = "300px";
 
 function toggleTheme() {
   const isLightTheme = elements.themeSwitch.checked;
