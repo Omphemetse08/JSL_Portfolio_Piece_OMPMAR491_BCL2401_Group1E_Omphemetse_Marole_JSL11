@@ -40,5 +40,5 @@ The code is divided into several sections:
 1. When changing the theme to light the logo doesn't disapear.
 2. Was struggling to move the toggle theme side-bar-bottom but i managed to fix it.
 3. I was struggling with Add New Task and the Create Task but managed to fix.
+   <<<<<<< HEAD
 4. https://www.loom.com/share/f5f947fc482a42a89cbac9fe7ee8eee1?sid=568b181f-77d1-4555-a0a2-6cd0295654a2
-5. https://www.loom.com/share/99e3859e8ae44e26b3424430b52526bc?sid=8cb55f79-93bc-4e61-a486-2ec8dac7e1ce
