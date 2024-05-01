@@ -41,3 +41,4 @@ The code is divided into several sections:
 2. Was struggling to move the toggle theme side-bar-bottom but i managed to fix it.
 3. I was struggling with Add New Task and the Create Task but managed to fix.
    https://www.loom.com/share/f5f947fc482a42a89cbac9fe7ee8eee1?sid=568b181f-77d1-4555-a0a2-6cd0295654a2
+   https://www.loom.com/share/9a7d501b9b5c4225aff18f397bda16b5?sid=d9eba7a5-83f0-4a43-a189-2173bac6596c
