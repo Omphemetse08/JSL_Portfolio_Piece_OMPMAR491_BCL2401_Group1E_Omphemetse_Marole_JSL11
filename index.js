@@ -199,7 +199,7 @@ function setupEventListeners() {
 
   // Add new task form submission event listener
   elements.modalWindow.addEventListener("submit", (event) => {
-    addTask(event);
+    addTaskToUI(event);
   });
 }
 
